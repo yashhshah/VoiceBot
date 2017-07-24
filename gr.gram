@@ -1,0 +1,13 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar 
+ */
+
+grammar grammar;
+
+
+
+
+public <CommandNames> = (zero open | zero close) (google);
+
