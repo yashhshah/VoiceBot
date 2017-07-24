@@ -1,8 +1,8 @@
 # VoiceBot
-A desktop voice bot that allows repetitive tasks to be done by just your voice. Coded using the sphinx4 library in java
+A desktop voice bot that allows repetitive tasks to be done by just your voice. Coded using the sphinx4 library in java. 
 
 
-The bot is named zero, after a video game character I really like
+The bot is named zero, hence every command will begin with the name. 
 
 
 List of commands
