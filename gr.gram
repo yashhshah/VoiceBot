@@ -9,5 +9,7 @@ grammar grammar;
 
 
 
-public <CommandNames> = (zero open | zero close) (google);
+public <CommandNames> = (zero open | zero close) (google|youtube|john's channel| hila's channel|felix's channel|my mail);
+
+public <exitbot> = (zero shutdown);
 

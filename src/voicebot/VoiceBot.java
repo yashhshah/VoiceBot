@@ -17,6 +17,7 @@ import java.io.IOException;
 
 public class VoiceBot { 
     
+    @SuppressWarnings("empty-statement")
     public static void main(String args[]) throws IOException{
         
         Configuration c = new Configuration(); 
@@ -40,23 +41,69 @@ public class VoiceBot {
     
     r.startRecognition(true);
     SpeechResult result = r.getResult();
+    int systemShutdown = 0;
     
    
    while ((result = r.getResult()) != null) {
         String whatCommand = result.getHypothesis();
+        System.out.println(whatCommand);
         if(whatCommand.equals("zero open google")){
-            Process p = Runtime.getRuntime().exec("\"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe\""); 
+             Runtime.getRuntime().exec("\"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe\""); 
         
     
         }
-        if(whatCommand.equals("zero close google")){
+        else if(whatCommand.equals("zero open youtube")){
+            String[] a = {"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe", "https://www.youtube.com/"};
+            Runtime.getRuntime().exec(a);
+        
+        }
+        else if(whatCommand.equals("zero open john's channel") || whatCommand.equals("zero open felix's channel")){
+            
+            if(whatCommand.equals("zero open john's channel")){
+                String[] a = {"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe", "https://www.youtube.com/user/MrFish235"};
+                Runtime.getRuntime().exec(a);
+            }
+           
+            else{
+                String[] a = {"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe", "https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw"};
+                Runtime.getRuntime().exec(a); 
+                
+            }
+            
+            
+        
+        }
+        
+        else if(whatCommand.equals("zero open my mail")){
+            String[] a = {"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe", "https://mail.google.com/mail/u/0/#inbox"};
+            Runtime.getRuntime().exec(a);
+        
+        
+        }
+        
+        else if(whatCommand.equals("zero open facebook")){
+            String[] a = {"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe", "https://www.facebook.com/"};
+            Runtime.getRuntime().exec(a);
+            
+        
+        }
+        else if(whatCommand.equals("zero close google") || whatCommand.equals("zero close youtube") || whatCommand.equals("zero close john's channel") || whatCommand.equals("zero close felix's channel")
+                || whatCommand.equals("zero close my mail")){
             
             Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
+        
+        }
+        else if(whatCommand.equals("zero shutdown")){
+            r.stopRecognition();
+            Runtime.getRuntime().halt(0);
+            System.exit(0);
+            
         
         }
         
         
     }
+   r.stopRecognition();
 }
     
     }
