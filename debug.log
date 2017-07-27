@@ -1,0 +1,4 @@
+[0726/193129.765:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0726/193129.765:ERROR:exception_snapshot_win.cc(87)] thread ID 12920 not found in process
+[0726/193129.765:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0726/193129.765:ERROR:scoped_process_suspend.cc(39)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)

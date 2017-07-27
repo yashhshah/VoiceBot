@@ -9,7 +9,26 @@ grammar grammar;
 
 
 
-public <CommandNames> = (zero open | zero close) (google|youtube|john's channel| hila's channel|felix's channel|my mail);
+public <CommandNames> = (zero open | zero close) (google|youtube|my mail|facebook|twitter);
 
 public <exitbot> = (zero shutdown);
 
+public <changeWindow> = (zero change to) (google|youtube|my mail);
+
+public<newWindow> = (zero new window);
+
+public <lastWindow> = (zero last window);
+
+public<closeWindow> = (zero close) (window|tab);
+
+
+public<tabs> = (zero new tab);
+
+public<lastTab> = (zero last tab);
+
+public<nextTab> = (zero next tab);
+
+
+public<maximize> = (zero maximize); 
+
+public<signIn> = (zero sign me) (in|out);
