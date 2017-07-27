@@ -1,8 +1,7 @@
 # VoiceBot
-A desktop voice bot that allows repetitive tasks to be done by just your voice. Coded using the sphinx4 library in java with selenium webdriver and javascript commands.  
 
+Having a bluetooth keyboard, my goal was to replace my mouse by just my voice so that I could work on my computer without having to just sit on my chair all day. Zero is a desktop voice bot that allows repetitive tasks to be done by just your voice. It was coded using the sphinx4 library in java and uses selenium webdriver and javascript for window and in general, browser manipulation. 
 
-The bot is named zero, after a video game character I use to play as a child
 
 
 List of commands
@@ -23,7 +22,7 @@ zero next tab: goes to the next tab
 
 zero maximize: maximizes current window
 
-zero sign me (in|out) : checks for what site you are on, and signs your username in accordingly(did not want to take risks for entering the password, even with encryption). Also signs you out when you are done
+zero sign me (in|out) : checks for what site you are on, and signs me in accordingly(did not want to take risks for entering the password, even with encryption). Also signs you out when you are done
 
 zero shutdown: stops recognition and closes the bot
 
