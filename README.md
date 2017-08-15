@@ -6,28 +6,25 @@ Having a bluetooth keyboard, my goal was to replace my mouse by just my voice so
 
 List of commands(taken from the grammar file I made, hence in that format)
 
+(zero open | zero close) (google|youtube|my mail|facebook|twitter);
 
-public <OpenCloseCommands> = (zero open | zero close) (google|youtube|my mail|facebook|twitter);
+(zero shutdown);
 
-public <exitbot> = (zero shutdown);
+(zero change to) (google|youtube|my mail);
 
-public <changeWindow> = (zero change to) (google|youtube|my mail);
+(zero new window);
 
-public<newWindow> = (zero new window);
+(zero last window);
 
-public <lastWindow> = (zero last window);
+(zero close) (window|tab);
 
-public<closeWindow> = (zero close) (window|tab);
+(zero new tab);
 
+(zero last tab);
 
-public<tabs> = (zero new tab);
+(zero next tab);
 
-public<lastTab> = (zero last tab);
+(zero maximize); 
 
-public<nextTab> = (zero next tab);
-
-
-public<maximize> = (zero maximize); 
-
-public<signIn> = (zero sign me) (in|out);
+(zero sign me) (in|out);
 
