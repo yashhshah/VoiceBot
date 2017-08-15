@@ -4,25 +4,30 @@ Having a bluetooth keyboard, my goal was to replace my mouse by just my voice so
 
 
 
-List of commands
+List of commands(taken from the grammar file I made, hence in that format)
 
-zero open (google|youtube|my mail) : opens a new window for the options stated
 
-zero change to (google|youtube|my mail) : changes the current tab to the options stated
+public <OpenCloseCommands> = (zero open | zero close) (google|youtube|my mail|facebook|twitter);
 
-zero new window: opens a new window
+public <exitbot> = (zero shutdown);
 
-zero close window: closes the current window
+public <changeWindow> = (zero change to) (google|youtube|my mail);
 
-zero new tab : opens a new tab
+public<newWindow> = (zero new window);
 
-zero last tab : goes to the previous tab 
+public <lastWindow> = (zero last window);
 
-zero next tab: goes to the next tab
+public<closeWindow> = (zero close) (window|tab);
 
-zero maximize: maximizes current window
 
-zero sign me (in|out) : checks for what site you are on, and signs me in accordingly(did not want to take risks for entering the password, even with encryption). Also signs you out when you are done
+public<tabs> = (zero new tab);
 
-zero shutdown: stops recognition and closes the bot
+public<lastTab> = (zero last tab);
+
+public<nextTab> = (zero next tab);
+
+
+public<maximize> = (zero maximize); 
+
+public<signIn> = (zero sign me) (in|out);
 
